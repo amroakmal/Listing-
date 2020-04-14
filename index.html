@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Cloud Cafe</h1>
+        <div class="content">
+            <form id="add-cafe-form">
+              <input type="text" name="name" placeholder="Cafe name">
+              <input type="text" name="city" placeholder="City">
+              <button>Add Cafe!</button>
+            </form>
+            <ul id="cafe-list"></ul>
+        </div>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script>
+          // Your web app's Firebase configuration
+          var firebaseConfig = {
+            apiKey: "AIzaSyDdo3d0mMCrr6hk32rzgZpRwIhDCNPP_e4",
+            authDomain: "firestore-coffee-ranking.firebaseapp.com",
+            databaseURL: "https://firestore-coffee-ranking.firebaseio.com",
+            projectId: "firestore-coffee-ranking",
+            storageBucket: "firestore-coffee-ranking.appspot.com",
+            messagingSenderId: "886888146725",
+            appId: "1:886888146725:web:f4fcdfaac0ad49c5999ccc",
+            measurementId: "G-S1M8ZKVMZ3"
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+          const db = firebase.firestore();
+          db.settings({timestampsInSnapshots: true});
+        </script>
+        <script src="app.js"></script>
+    </body>
+</html>
